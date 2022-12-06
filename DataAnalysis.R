@@ -19,11 +19,11 @@ library(ape)
 
 ###Dataframe Reading and Storage###
 #Read and peek at data for calculated trait values
-DeltaTraits <- read.csv(file = "C:/Users/David/OneDrive - Knights - University of Central Florida/HUT/DeltaTraits.csv")
+DeltaTraits <- read.csv(file = "https://raw.githubusercontent.com/DavidZM512/UndergradThesis/main/DeltaTraits.csv?token=GHSAT0AAAAAAB4CKUVNSXOSWKTT22IRVEDKY4PR6FQ")
 head(DeltaTraits)
 
 #Read and peek at data for raw trait values
-AbsoluteTraits <- read.csv(file="C:/Users/David/OneDrive - Knights - University of Central Florida/HUT/RawTraitData.csv")
+AbsoluteTraits <- read.csv(file="https://raw.githubusercontent.com/DavidZM512/UndergradThesis/main/RawTraitData.csv?token=GHSAT0AAAAAAB4CKUVMR5V7WGWHDNRJCFDQY4PR7KQ")
 head(AbsoluteTraits)
 
 ###Visualizing Absolute Traits###
@@ -53,13 +53,6 @@ ggplot(AbsoluteTraits, aes(x = Species, y = Chlorophyll_content)) +
 ggplot(AbsoluteTraits, aes(x = Species, y = Biomass_g)) +
   geom_boxplot()+
   coord_flip()
-
-#Remove R_sinu_1 from LMA subset
-#Remove R_sinu_1 from SLA subset
-#Remove R_sinu_1 from LAR subset
-#Visualize LMA excluding R_sinu_1
-#Visualize SLA excluding R_sinu_1
-#Visualize LAR excluding R_sinu_1
 
 #Correlation Matrix
 #Select Traits of Interest by dataframe columns
@@ -300,7 +293,7 @@ delta_multi_plot
 
 ###Prune Develaux Tree###
 
-filename <- "C:/Users/David/OneDrive - Knights - University of Central Florida/HUT/Git_repository_Pipeline2_OTU_Jan.2021/Git_repository_Pipeline2_OTU/Root_V15_LSUDB-1000BS-GTRGAMMA-bootstrap-tree.newick"
+filename <- "https://raw.githubusercontent.com/DavidZM512/UndergradThesis/main/V10.root.LSUDAT-raxml-1000BS-GTRGAMMA-bootstrap-tree.newick?token=GHSAT0AAAAAAB4CKUVNI5TJ7R6VXRIVVRTWY4PSA7Q"
 tree <- phytools::read.newick(filename)
 plot(tree)
 tip <- c("X52322.1_Arabidopsis_thaliana",
